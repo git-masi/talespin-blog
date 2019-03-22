@@ -1,8 +1,9 @@
 {
-  "name": "restfulblogapp",
+  "name": "TaleSpin Blogs",
   "version": "1.0.0",
-  "description": "RESTful blog app example",
+  "description": "A CRUD app using restful routing",
   "main": "app.js",
+  "homepage": "https://git-masi.github.io/talespin-blog/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
