@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A CRUD app using restful routing",
   "main": "app.js",
-  "homepage": "https://git-masi.github.io/talespin-blog/",
+  "homepage": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
