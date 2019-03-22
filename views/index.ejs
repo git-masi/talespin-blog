@@ -1,0 +1,51 @@
+<% include ./partials/header %>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">TaleSpin</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/blogs/new">New</a>
+      </li>
+    </ul>
+    <form action="javascript:void(0)" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">TaleSpin Blogs</h1>
+    <p class="lead ml-1">TaleSpin offers currated blogs for decerning readers.</p>
+    <a href="/blogs/new" class="btn btn-primary" role="button">Create New Blog</a>
+  </div>
+</div>
+
+<div class="container mb-3">
+  <% blogs.forEach(function(blog){ %>
+    <div class="row justify-content-center mb-3">
+      <div class="col col-lg-8">
+        <div class="card">
+          <img src="<%= blog.image %>" class="card-img-top" alt="image related to <%= blog.title %>">
+          <div><%= blog.created.toDateString() %></div>
+          <div class="card-body">
+            <h5 class="card-title"><%= blog.title %></h5>
+            <p class="card-text"><%= blog.body.substring(0, 75) %>...</p>
+            <a href="/blogs/<%= blog._id %>" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+<% include ./partials/footer %>
